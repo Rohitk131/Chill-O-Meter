@@ -52,7 +52,7 @@ export default function RootLayout({
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Chill-O-Meter" />
         <meta property="og:description" content="Are You the Ultimate Chill Guy? Take the Test!" />
-        <meta property="og:image" content="./og-image.png" />
+        <meta property="og:image" content="/og-image.png" />
         <meta property="og:url" content="https://chill-o-meter.vercel.app/" />
         <meta property="og:type" content="website" />
 
