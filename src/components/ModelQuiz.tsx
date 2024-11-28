@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { X, ChevronRight, Twitter } from 'lucide-react'
 import confetti from 'canvas-confetti'
 import { ChillGraph } from './ChillGraph'
-import { toPng } from 'html-to-image'
+
 
 type Question = {
   question: string
