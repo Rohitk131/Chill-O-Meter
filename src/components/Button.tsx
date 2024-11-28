@@ -1,7 +1,7 @@
-const NeubrutalismButton = () => {
+const NeubrutalismButton = ({handleModelOpen}) => {
     return (
       <button
-        onClick={() => console.log('SyntaxUI is the best!')}
+        onClick={handleModelOpen}
         className={'group/button rounded-lg bg-white text-black'}
       >
         <span
