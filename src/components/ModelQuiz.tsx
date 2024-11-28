@@ -98,7 +98,7 @@ const InteractiveQuizModal: React.FC<InteractiveQuizModalProps> = ({ isOpen, onC
   }
   const shareOnTwitter = useCallback(() => {
     try {
-      const tweetText = `I scored ${chillScore.toFixed(1)}% on the Chill-O-Mater! ${getChillMessage(chillScore)} How much Chill Guy are you? Find out now:  #ChillGuy`;
+      const tweetText = `I scored ${chillScore.toFixed(1)}% on the Chill-O-Mater! ${getChillMessage(chillScore)} How much Chill Guy are you? Find out now:https://chill-o-meter.vercel.app/  #ChillGuy`;
       const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
   
       window.open(twitterShareUrl, '_blank', 'width=600,height=300');
