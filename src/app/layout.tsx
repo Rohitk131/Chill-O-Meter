@@ -60,7 +60,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Chill-O-Meter" />
         <meta name="twitter:description" content="Are You the Ultimate Chill Guy? Take the Test!" />
-        <meta name="twitter:image" content="og-image.png" />
+        <meta name="twitter:image" content="/og-image.png" />
 
         <title>Chill-O-Meter</title>
       </head>
