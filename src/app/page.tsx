@@ -7,8 +7,8 @@ import Confetti from 'react-confetti'
 import ChillGuyQuizModal from '@/components/ModelQuiz'
 import Image from 'next/image'
 import BackgroundDots from '@/components/BackgroundDots'
-import Link from 'next/link'
-import { Github } from 'lucide-react';
+import CreditButton from '@/components/CreditButton'
+
 export default function ChillGuyQuizLanding() {
   const [isHovering, setIsHovering] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -92,42 +92,9 @@ export default function ChillGuyQuizLanding() {
         isOpen={isModalOpen}
         onClose={handleCloseModal}
       />
-      <Link 
-  href="https://github.com/Rohitk131" 
-  target="_blank" 
-  className="group"
->
-  <button
-    className="
-      flex flex-row items-center justify-center z-50 mt-6
-      gap-2 
-      px-4 py-2 
-      rounded-full 
-      bg-black/90 
-      border border-gray-500/40 
-      text-white 
-      transition-all duration-300 
-      hover:bg-black/70 
-      hover:scale-105 
-      focus:outline-none 
-      focus:ring-2 
-      focus:ring-blue-500/50 
-      active:scale-95
-    "
-  >
-    <Github 
-      className="
-        group-hover:rotate-[360deg] 
-        transition-transform 
-        duration-500
-      " 
-      size={20} 
-    />
-    <span className="font-poppins text-sm">
-      Created by @Rohitk131
-    </span>
-  </button>
-</Link>
+      <div className='mt-6'>
+      <CreditButton/>
+      </div>
     </div>
   )
 }
