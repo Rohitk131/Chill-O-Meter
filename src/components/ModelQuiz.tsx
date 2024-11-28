@@ -96,36 +96,18 @@ const InteractiveQuizModal: React.FC<InteractiveQuizModalProps> = ({ isOpen, onC
       }
     }
   }
-
-  const shareOnTwitter = useCallback(async () => {
+  const shareOnTwitter = useCallback(() => {
     try {
-    
-      if (!graphRef.current) {
-        console.error('Graph ref is null')
-        return
-      }
-
+      const tweetText = `I scored ${chillScore.toFixed(1)}% on the Chill-O-Mater! ${getChillMessage(chillScore)} How much Chill Guy are you? Find out now:  #ChillGuy`;
+      const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
   
-      const imageUrl = await toPng(graphRef.current, { 
-        cacheBust: true,
-       
-        width: graphRef.current.offsetWidth,
-        height: graphRef.current.offsetHeight 
-      })
-
-    
-      const twitterText = encodeURIComponent(
-        `I scored ${chillScore.toFixed(1)}% on the Chill Vibe Quiz! ${
-          getChillMessage(chillScore)
-        } #ChillVibeQuiz`
-      )
-      const twitterUrl = `https://twitter.com/intent/tweet?text=${twitterText}&url=${encodeURIComponent(imageUrl)}`
-   
-      window.open(twitterUrl, '_blank')
+      window.open(twitterShareUrl, '_blank', 'width=600,height=300');
     } catch (error) {
-      console.error('Error sharing on Twitter:', error)
+      console.error('Error sharing on Twitter:', error);
+      alert('Failed to share on Twitter. Please try again.');
     }
-  }, [chillScore])
+  }, [chillScore]);
+  
 
   if (!isOpen) return null
 
